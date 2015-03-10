@@ -11,7 +11,14 @@
                  [compojure "1.2.0"]
                  [org.clojure/tools.logging "0.3.1"]
                  [puppetlabs/trapperkeeper ~tk-version]
-                 [puppetlabs/trapperkeeper-webserver-jetty9 ~tk-jetty9-version]]
+                 [puppetlabs/trapperkeeper-webserver-jetty9 ~tk-jetty9-version]
+
+                 [clj-time "0.9.0"]
+                 [io.pedestal/pedestal.service "0.3.1"]
+                 [ch.qos.logback/logback-classic "1.1.2" :exclusions [org.slf4j/slf4j-api]]
+                 [org.slf4j/jul-to-slf4j "1.7.7"]
+                 [org.slf4j/jcl-over-slf4j "1.7.7"]
+                 [org.slf4j/log4j-over-slf4j "1.7.7"]]
 
   :profiles {:dev {:dependencies [[puppetlabs/trapperkeeper ~tk-version :classifier "test" :scope "test"]
                                   [puppetlabs/kitchensink ~ks-version :classifier "test" :scope "test"]
